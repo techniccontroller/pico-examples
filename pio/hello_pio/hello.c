@@ -26,7 +26,7 @@ int main() {
     // none). Configure it to run our program, and start it, using the
     // helper function we included in our .pio file.
     uint sm = pio_claim_unused_sm(pio, true);
-    hello_program_init(pio, sm, offset, PICO_DEFAULT_LED_PIN);
+    hello_program_init(pio, sm, offset, 17);
 
     // The state machine is now running. Any value we push to its TX FIFO will
     // appear on the LED pin.

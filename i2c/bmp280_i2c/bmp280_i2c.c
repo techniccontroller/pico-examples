@@ -29,7 +29,7 @@
  */
 
  // device has default bus address of 0x76
-#define ADDR _u(0x76)
+#define ADDR _u(0x77)
 
 // hardware registers
 #define REG_CONFIG _u(0xF5)
@@ -210,6 +210,11 @@ void bmp280_get_calib_params(struct bmp280_calib_param* params) {
 
 int main() {
     stdio_init_all();
+
+    for(int i = 0; i < 20; i++) {
+        printf("Hello, world!\n");
+        sleep_ms(1000);
+    }
 
 #if !defined(i2c_default) || !defined(PICO_DEFAULT_I2C_SDA_PIN) || !defined(PICO_DEFAULT_I2C_SCL_PIN)
     #warning i2c / bmp280_i2c example requires a board with I2C pins
